@@ -433,7 +433,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        dispatch({ type: 'SET_SAVED_SCORE', payload: { score: localStorage.getItem('score') ?? 0 } });
+        dispatch({ type: 'SET_SAVED_SCORE', payload: { score: localStorage?.getItem('score') ?? 0 } });
     }, [dispatch]);
 
     useEffect(() => {
@@ -495,7 +495,7 @@ const Home = () => {
     // Stores the updated score in localStorage to preserve the value after the browser is refreshed
     useEffect(() => {
         if (userChoice && computerChoice) {
-            localStorage.setItem('score', score);
+            localStorage?.setItem('score', score);
         }
     }, [score, userChoice, computerChoice]);
 
