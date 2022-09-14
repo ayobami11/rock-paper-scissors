@@ -37,8 +37,8 @@ Result:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/rock-paper-scissors-lizard-spock-using-react-and-styledcomponents-dHl-wejF3N)
+- [Live Site URL](https://rock-paper-scissors-ls.netlify.app/)
 
 ## My process
 

@@ -90,6 +90,18 @@ const Header = styled.header`
     }
 `;
 
+const H1 = styled.h1`
+    /* Visually hidden text, only available for screen readers */
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+`;
+
 const Main = styled.main`
     display: flex;
     flex-direction: column;
@@ -491,8 +503,9 @@ const Home = () => {
     return (
         <Page>
             <Header>
+            <H1>Rock, Paper, Scissors, Lizard, Spock</H1>
                 <figure className='header__fig'>
-                    <img src={logo} alt="Logo" />
+                    <img src={logo} alt="Rock, paper, scissors, lizard, spock logo" />
                     <figcaption className='header__scorecard'>
                         <h2 className='header__score-title'>Score</h2>
                         <motion.span key={score} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className='header__score-no'>{score}</motion.span>
