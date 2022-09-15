@@ -33,8 +33,6 @@ Result:
 
 ![Screenshot showing the result of a round](./public/screenshot-result.png)
 
-
-
 ### Links
 
 - [Solution URL](https://www.frontendmentor.io/solutions/rock-paper-scissors-lizard-spock-using-react-and-styledcomponents-dHl-wejF3N)
@@ -51,8 +49,6 @@ Result:
 - [React](https://reactjs.org/) - JS library
 - [Styled Components](https://styled-components.com/) - For styles
 - [Framer Motion](https://framer.com/) - For animations and transitions
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 

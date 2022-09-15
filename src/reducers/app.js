@@ -69,11 +69,11 @@ export const reducer = (state, action) => {
                 showResults: !state.showResults
             }
 
-        case 'SET_SAVED_SCORE':
-            return {
-                ...state,
-                score: action.payload.score
-            }
+        // case 'SET_SAVED_SCORE':
+        //     return {
+        //         ...state,
+        //         score: action.payload.score
+        //     }
 
         case 'SET_USER_CHOICE':
             return {

@@ -433,7 +433,7 @@ const Home = () => {
     }
 
     // useEffect(() => {
-    //     dispatch({ type: 'SET_SAVED_SCORE', payload: { score: localStorage?.getItem('score') ?? 0 } });
+    //     dispatch({ type: 'SET_SAVED_SCORE', payload: { score: localStorage.getItem('score') ?? 0 } });
     // }, [dispatch]);
 
     useEffect(() => {
@@ -491,24 +491,29 @@ const Home = () => {
         }
     }, [dispatch, userChoice, computerChoice]);
 
-    
+
     // Stores the updated score in localStorage to preserve the value after the browser is refreshed
-    // useEffect(() => {
-    //     if (userChoice && computerChoice) {
-    //         localStorage?.setItem('score', score);
-    //     }
-    // }, [score, userChoice, computerChoice]);
+    useEffect(() => {
+        if (userChoice && computerChoice) {
+            localStorage.setItem('score', score);
+        }
+    }, [score, userChoice, computerChoice]);
 
 
     return (
         <Page>
             <Header>
-            <H1>Rock, Paper, Scissors, Lizard, Spock</H1>
+                <H1>Rock, Paper, Scissors, Lizard, Spock</H1>
                 <figure className='header__fig'>
                     <img src={logo} alt="Rock, paper, scissors, lizard, spock logo" />
                     <figcaption className='header__scorecard'>
                         <h2 className='header__score-title'>Score</h2>
-                        <motion.span key={score} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className='header__score-no'>{score}</motion.span>
+                        <motion.span
+                            key={localStorage.getItem('score') ?? score}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1.5 }}
+                            className='header__score-no'>{localStorage.getItem('score') ?? score}</motion.span>
                     </figcaption>
                 </figure>
             </Header>
