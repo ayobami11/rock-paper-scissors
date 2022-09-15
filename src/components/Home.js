@@ -493,11 +493,11 @@ const Home = () => {
 
 
     // Stores the updated score in localStorage to preserve the value after the browser is refreshed
-    useEffect(() => {
-        if (userChoice && computerChoice) {
-            localStorage.setItem('score', score);
-        }
-    }, [score, userChoice, computerChoice]);
+    // useEffect(() => {
+    //     if (userChoice && computerChoice) {
+    //         localStorage.setItem('score', score);
+    //     }
+    // }, [score, userChoice, computerChoice]);
 
 
     return (
@@ -509,11 +509,11 @@ const Home = () => {
                     <figcaption className='header__scorecard'>
                         <h2 className='header__score-title'>Score</h2>
                         <motion.span
-                            key={localStorage.getItem('score') ?? score}
+                            key={score}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1.5 }}
-                            className='header__score-no'>{localStorage.getItem('score') ?? score}</motion.span>
+                            className='header__score-no'>{score}</motion.span>
                     </figcaption>
                 </figure>
             </Header>
