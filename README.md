@@ -8,7 +8,6 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
   - [Features](#features)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
 - [Author](#author)
@@ -37,8 +36,6 @@ Result:
 
 - [Solution URL](https://www.frontendmentor.io/solutions/rock-paper-scissors-lizard-spock-using-react-and-styledcomponents-dHl-wejF3N)
 - [Live Site URL](https://rock-paper-scissors-ls.netlify.app/)
-
-## My process
 ### Built with
 
 - Semantic HTML5 markup
@@ -73,5 +70,5 @@ const { colors: { rockGradient, paperGradient, scissorsGradient, lizardGradient,
 ## Author
 
 - Website - [Ayobami Tunwase](https://github.com/ayobami11)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@ayobami11](https://www.frontendmentor.io/profile/ayobami11)
 - Twitter - [@TunwaseAyobami](https://www.twitter.com/TunwaseAyobami)
