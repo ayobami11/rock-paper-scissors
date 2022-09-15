@@ -432,23 +432,15 @@ const Home = () => {
         dispatch({ type: 'TOGGLE_RESULT_DISPLAY' })
     }
 
-    useEffect(() => {
-        if (localStorage?.getItem('score')) {
-            dispatch({ type: 'SET_SAVED_SCORE', payload: { score: localStorage?.getItem('score') ?? 0 } });
-        }
-    }, [dispatch]);
+    // useEffect(() => {
+    //     dispatch({ type: 'SET_SAVED_SCORE', payload: { score: localStorage?.getItem('score') ?? 0 } });
+    // }, [dispatch]);
 
     useEffect(() => {
         if (userChoice) {
             switch (userChoice) {
                 case 'rock':
-                    setUserChoiceImg(rockIcon)<!-- I've just completed a front-end coding challenge from @frontendmentor! 🎉
-
-                    You can see my solution here: https://www.frontendmentor.io/solutions/rock-paper-scissors-lizard-spock-using-react-and-styledcomponents-dHl-wejF3N
-                    
-                    Any suggestions on how I can improve are welcome!
-                    
-                    #FrontendMentor #CodeChallenge -->;
+                    setUserChoiceImg(rockIcon);
                     break;
                 case 'paper':
                     setUserChoiceImg(paperIcon);
@@ -499,19 +491,19 @@ const Home = () => {
         }
     }, [dispatch, userChoice, computerChoice]);
 
-
+    
     // Stores the updated score in localStorage to preserve the value after the browser is refreshed
-    useEffect(() => {
-        if (userChoice && computerChoice) {
-            localStorage?.setItem('score', score);
-        }
-    }, [score, userChoice, computerChoice]);
+    // useEffect(() => {
+    //     if (userChoice && computerChoice) {
+    //         localStorage?.setItem('score', score);
+    //     }
+    // }, [score, userChoice, computerChoice]);
 
 
     return (
         <Page>
             <Header>
-                <H1>Rock, Paper, Scissors, Lizard, Spock</H1>
+            <H1>Rock, Paper, Scissors, Lizard, Spock</H1>
                 <figure className='header__fig'>
                     <img src={logo} alt="Rock, paper, scissors, lizard, spock logo" />
                     <figcaption className='header__scorecard'>
