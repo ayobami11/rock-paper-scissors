@@ -433,7 +433,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        dispatch({ type: 'SET_SAVED_SCORE', payload: { score: localStorage.getItem('score') ?? 0 } });
+        dispatch({ type: 'SET_SAVED_SCORE', payload: { score: parseInt(localStorage.getItem('score')) ?? 0 } });
     }, [dispatch]);
 
     useEffect(() => {
@@ -508,12 +508,13 @@ const Home = () => {
                     <img src={logo} alt="Rock, paper, scissors, lizard, spock logo" />
                     <figcaption className='header__scorecard'>
                         <h2 className='header__score-title'>Score</h2>
-                        <motion.span
+                        <span>{score}</span>
+                        {/* <motion.span
                             key={score}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1.5 }}
-                            className='header__score-no'>{score}</motion.span>
+                            className='header__score-no'>{score}</motion.span> */}
                     </figcaption>
                 </figure>
             </Header>
