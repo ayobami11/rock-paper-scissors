@@ -441,7 +441,7 @@ const Home = () => {
     }
 
     useEffect(() => {
-        dispatch({ type: 'SET_SAVED_SCORE', payload: { score: parseInt(localStorage.getItem('score')) ?? 0 } });
+        dispatch({ type: 'SET_SAVED_SCORE', payload: { score: parseInt(localStorage.getItem('score') ?? 0) } });
     }, [dispatch]);
 
     useEffect(() => {
