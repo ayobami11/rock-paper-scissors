@@ -141,7 +141,15 @@ const Main = styled.main`
     .choice__img-c {
         /* prevents box-shadow of the user's choice from overlapping the result */
         position: relative;
-        z-index: 1;
+        z-index: 2;
+
+        &--user {
+            ${({ $winner }) => $winner === 'user' && `z-index: 1;`}
+        }
+        
+        &--computer {
+            ${({ $winner }) => $winner === 'computer' && `z-index: 1;`}
+        }
     }
     
     .option__btn {
@@ -491,15 +499,6 @@ const Home = () => {
         }
     }, [dispatch, userChoice, computerChoice]);
 
-
-    // Stores the updated score in localStorage to preserve the value after the browser is refreshed
-    // useEffect(() => {
-    //     if (userChoice && computerChoice) {
-    //         localStorage.setItem('score', score);
-    //     }
-    // }, [score, userChoice, computerChoice]);
-
-
     return (
         <Page>
             <Header>
@@ -508,17 +507,16 @@ const Home = () => {
                     <img src={logo} alt="Rock, paper, scissors, lizard, spock logo" />
                     <figcaption className='header__scorecard'>
                         <h2 className='header__score-title'>Score</h2>
-                        <span>{score}</span>
-                        {/* <motion.span
+                        <motion.span
                             key={score}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1.5 }}
-                            className='header__score-no'>{score}</motion.span> */}
+                            className='header__score-no'>{score}</motion.span>
                     </figcaption>
                 </figure>
             </Header>
-            <Main>
+            <Main $winner={winner}>
                 {
                     !showResults ?
                         <GameOptions initial={{ opacity: 0, scale: 0 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ type: 'spring', duration: 1 }} className='options'>

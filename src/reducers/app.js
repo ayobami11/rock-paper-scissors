@@ -94,7 +94,6 @@ export const reducer = (state, action) => {
                 state.score + 1 : result === 'computer' && state.score > 0 ?
                     state.score - 1 : state.score;
 
-            console.log(state.score);
             localStorage.setItem('score', newScore);
 
             return {
