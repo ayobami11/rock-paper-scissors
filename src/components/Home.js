@@ -432,9 +432,9 @@ const Home = () => {
         dispatch({ type: 'TOGGLE_RESULT_DISPLAY' })
     }
 
-    // useEffect(() => {
-    //     dispatch({ type: 'SET_SAVED_SCORE', payload: { score: localStorage.getItem('score') ?? 0 } });
-    // }, [dispatch]);
+    useEffect(() => {
+        dispatch({ type: 'SET_SAVED_SCORE', payload: { score: localStorage.getItem('score') ?? 0 } });
+    }, [dispatch]);
 
     useEffect(() => {
         if (userChoice) {

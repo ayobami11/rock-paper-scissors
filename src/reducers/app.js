@@ -69,11 +69,11 @@ export const reducer = (state, action) => {
                 showResults: !state.showResults
             }
 
-        // case 'SET_SAVED_SCORE':
-        //     return {
-        //         ...state,
-        //         score: action.payload.score || state.score
-        //     }
+        case 'SET_SAVED_SCORE':
+            return {
+                ...state,
+                score: action.payload.score
+            }
 
         case 'SET_USER_CHOICE':
             return {
@@ -90,12 +90,17 @@ export const reducer = (state, action) => {
         case 'SET_SCORE':
             const result = getResult(state.userChoice, state.computerChoice);
 
+            const newScore = result === 'user' ?
+                state.score++ : result === 'computer' && state.score > 0 ?
+                    state.score-- : state.score;
+
+            console.log(state.score);
+            localStorage.setItem('score', newScore);
+
             return {
                 ...state,
                 winner: result,
-                score: result === 'user' ?
-                    state.score++ : result === 'computer' && state.score > 0 ?
-                        state.score-- : state.score
+                score: newScore
             }
 
         default:

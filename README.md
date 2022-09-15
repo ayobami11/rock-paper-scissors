@@ -39,6 +39,13 @@ Result:
 - [Live Site URL](https://rock-paper-scissors-ls.netlify.app/)
 
 ## My process
+<!-- I've just completed a front-end coding challenge from @frontendmentor! 🎉
+
+You can see my solution here: https://www.frontendmentor.io/solutions/rock-paper-scissors-lizard-spock-using-react-and-styledcomponents-dHl-wejF3N
+
+Any suggestions on how I can improve are welcome!
+
+#FrontendMentor #CodeChallenge -->
 
 ### Built with
 

@@ -22,7 +22,7 @@ export const ThemeContextWrapper = ({ children }) => {
             white: 'hsl(0, 0%, 100%)',
 
             // Background
-            radialGradient: 'radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%))'
+            radialGradient: 'radial-gradient(at top, hsl(214, 47%, 23%), hsl(237, 49%, 15%))'
         },
 
         // Fonts
