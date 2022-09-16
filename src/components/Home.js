@@ -399,7 +399,10 @@ const RulesBtn = styled(motion.button)`
 
 const Footer = styled.footer`
     color: ${({ theme }) => theme.colors.white};
+    letter-spacing: .025em;
+    line-height: 1.5;
     margin-top: 1em;
+    text-align: center;
     
     .footer__link {
         color: hsl(39, 89%, 49%);
