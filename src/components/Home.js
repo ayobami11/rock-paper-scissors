@@ -397,6 +397,15 @@ const RulesBtn = styled(motion.button)`
     }
 `;
 
+const Footer = styled.footer`
+    color: ${({ theme }) => theme.colors.white};
+    margin-top: 1em;
+    
+    .footer__link {
+        color: hsl(39, 89%, 49%);
+    }
+`;
+
 const Home = () => {
     const { state: { userChoice, computerChoice, score, winner, showResults }, dispatch } = useContext(AppContext);
 
@@ -606,6 +615,18 @@ const Home = () => {
                     <RulesModal />
                 </aside>
             </Main>
+            <Footer>
+                <p>
+                    Challenge by <a className='footer__link'
+                        href="https://www.frontendmentor.io?ref=challenge"
+                        target="_blank"
+                        rel="noreferrer">Frontend Mentor</a>.
+                    Coded by <a className='footer__link'
+                        href="https://github.com/ayobami11/rock-paper-scissors"
+                        target="_blank"
+                        rel="noreferrer">Ayobami Tunwase</a>.
+                </p>
+            </Footer>
         </Page >
     )
 }
